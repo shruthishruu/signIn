@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body class="w3-black">
+  <div class="" style="min-height: 750px; background-position: initial; background-size: cover; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial; background-image: url(&quot;https://wallpaperheart.com/wp-content/uploads/2018/03/hd-background-images-beautiful-background-hd-wallpapers-pulse-of-background-hd.jpg&quot;); border-radius: 0px;">
+    <br><br><br><br><br><br><br><br>
+    <div class="w3-center">
+      
+      <h2 class="w3-xxxlarge w3-text-white"><font face="Dancing Script"><i>Welcome</i></font></h2>
+      <br><br>
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-orange w3-round-medium w3-text-white"> Login </button>
+      <button onclick="document.getElementById('id02').style.display='block'" class="w3-btn w3-orange w3-round-medium w3-text-white"> Register </button>
+    </div>
+
+  </div>
+
+
+  <div id="id01"  class="w3-modal w3-text-black">
+    <div id="login_id" style="max-width: 400px;" class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p class="w3-large w3-text-orange">Login</p>
+        <p class="w3-medium">email</p>
+        <input type="email" name="email1" class=" w3-input w3-border" id='email_field' required>
+        <p class="w3-medium">Password</p>
+        <input type="password" name="password1" class="w3-input w3-border" id='password_field' required>
+        <br>
+        <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br><br>
+    <center>
+        <button onclick="login()" class="w3-btn w3-orange w3-text-white">Login</button>
+      </center>
+      
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="id02"  class="w3-modal w3-text-black">
+    <div style="max-width: 400px;" class="w3-modal-content">
+      <div class="w3-container">
+        <form><span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p class="w3-large w3-text-orange">Register</p>
+        <p class="w3-medium">Name</p>
+        <input type="text" name="name" class=" w3-input w3-border" required>
+        <p class="w3-medium">Email</p>
+        <input type="Email" name="email" class=" w3-input w3-border"  required>
+        <p class="w3-medium">Password</p>
+        <input type="password" name="password1" class=" w3-input w3-border" pattern="[A-Za-z0-9]{8,}" title="Password should contains minimum 8 characters" required>
+        <p class="w3-medium">Confirm Password</p>
+        <input type="password" name="password2" class="w3-input w3-border" pattern="[A-Za-z0-9]{8,}" title="Password should contains minimum 8 characters" required>
+        <br>
+        <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br><br>
+    <center>
+        <button class="w3-btn w3-orange w3-text-white" type="submit">Login</button>
+      </center>
+      </form>
+        <br><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCUT5aiKsvwfZ4pVLyX1pwmHsaDNWHFJ9U",
+    authDomain: "login-51b52.firebaseapp.com",
+    databaseURL: "https://login-51b52.firebaseio.com",
+    projectId: "login-51b52",
+    storageBucket: "login-51b52.appspot.com",
+    messagingSenderId: "388748301675",
+    appId: "1:388748301675:web:80085b26c30a706d55282e",
+    measurementId: "G-5JTH2RLBXJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="index.js"></script>
+
+</body>
+</html>
