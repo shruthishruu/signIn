@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCUT5aiKsvwfZ4pVLyX1pwmHsaDNWHFJ9U",
+    authDomain: "login-51b52.firebaseapp.com",
+    databaseURL: "https://login-51b52.firebaseio.com",
+    projectId: "login-51b52",
+    storageBucket: "login-51b52.appspot.com",
+    messagingSenderId: "388748301675",
+    appId: "1:388748301675:web:80085b26c30a706d55282e",
+    measurementId: "G-5JTH2RLBXJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script type="text/javascript">
+  	function logout() {
+	// body...
+	 
+ 	 
+
+ 	firebase.auth().signOut().then(function() {
+  	// Sign-out successful.
+ 	 window.location = "index.html";
+		}).catch(function(error) {
+  	// An error happened.
+		});
+	}
+  </script>
+</head>
+<body style="background-image:url(abc.jpg);background-size:cover;">
+	
+	<div class="" style="min-height: 750px; background-position: initial; background-size: cover; background-repeat: no-repeat; background-attachment: initial; background-origin: initial; background-clip: initial;border-radius: 0px;">
+    <br><br><br><br><br><br><br><br>
+    <div class="w3-center">
+      
+      <h2 class="w3-xxxlarge w3-text-white"><font face="Dancing Script"><i>Dashboard</i></font></h2>
+      <br><br>
+      <button onclick="logout()" class="w3-center w3-btn w3-orange w3-round-medium w3-text-white"> Logout </button>
+    </div>
+
+  </div>
+
+
+</body>
+</html>
